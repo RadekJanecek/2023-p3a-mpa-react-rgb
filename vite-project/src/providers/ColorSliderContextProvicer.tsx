@@ -54,6 +54,7 @@ interface IColorSliderProvider {
 export const ColorSliderContextProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     /*const [color, setColor] = React.useState<colorType>({R: 0, G: 0, B: 0 });*/
     const reduce = useReducer(colorsReducer, initialState);
+    // reduce = [state, dispatch]
 
 /*
     const changeColor = (color: colorType) => {
