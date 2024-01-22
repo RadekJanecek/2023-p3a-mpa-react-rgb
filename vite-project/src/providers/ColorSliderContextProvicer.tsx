@@ -46,12 +46,12 @@ const initialState: stateType = {
 
 export const ColorSlidersContext = React.createContext<[stateType, React.Dispatch<ColorAction>]>([initialState, () => {}]);
 
-
+/*
 interface IColorSliderProvider {
     children: React.ReactNode;
-}
+}*/
 
-export const ColorSliderContextProvider: React.FC<IColorSliderProvider> = ({ children }) => {
+export const ColorSliderContextProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     /*const [color, setColor] = React.useState<colorType>({R: 0, G: 0, B: 0 });*/
     const reduce = useReducer(colorsReducer, initialState);
 
